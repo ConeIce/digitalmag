@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>My New Hugo Site</title>
+    <link>http://example.org/</link>
+    <description>Recent content on My New Hugo Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 07 May 2023 22:55:51 +0530</lastBuildDate><atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Content</title>
+      <link>http://example.org/blogs/content/</link>
+      <pubDate>Sun, 07 May 2023 22:55:51 +0530</pubDate>
+      
+      <guid>http://example.org/blogs/content/</guid>
+      <description>new contetn
+2asd 123 lorem Education has never been just about learning certain subjects and doing well in exams; rather it is a peek into the way of life and a powerful tool which can conquer great accomplishments. Our prestigious institution strives to shape a generation that is capable to take up on the challenges put forward by the modern world. We have always tried to inculcate divergent thinking and creativity among our students.</description>
+    </item>
+    
+    <item>
+      <title>new2</title>
+      <link>http://example.org/blogs/new2/</link>
+      <pubDate>Sun, 07 May 2023 22:55:51 +0530</pubDate>
+      
+      <guid>http://example.org/blogs/new2/</guid>
+      <description>new contetn
+2asd
+123 Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur vel modi deserunt hic architecto eos illum dolorem ipsum deleniti neque recusandae dolores, commodi sint accusantium, totam, temporibus illo cupiditate provident! Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur vel modi deserunt hic architecto eos illum dolorem ipsum deleniti neque recusandae dolores, commodi sint accusantium, totam, temporibus illo cupiditate provident! Lorem ipsum dolor sit amet consectetur adipisicing elit.</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>http://example.org/poems/about/</link>
+      <pubDate>Sun, 07 May 2023 22:55:10 +0530</pubDate>
+      
+      <guid>http://example.org/poems/about/</guid>
+      <description>This is a porm
+a list item </description>
+    </item>
+    
+    <item>
+      <title>Thi si a post</title>
+      <link>http://example.org/thisisapost/</link>
+      <pubDate>Sun, 07 May 2023 22:55:10 +0530</pubDate>
+      
+      <guid>http://example.org/thisisapost/</guid>
+      <description>This is a porm
+a list item </description>
+    </item>
+    
+  </channel>
+</rss>

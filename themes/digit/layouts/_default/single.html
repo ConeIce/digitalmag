@@ -1,0 +1,29 @@
+{{ define "main" }}
+<div class="content-wrap">
+  <div class="container">
+    <div class="row justify-content-center text-center pt-60 pb-130 mt-30">
+      <div class="col-12 col-lg-8">
+        <div
+          class="subtitle show-on-scroll"
+          data-show-duration="500"
+          data-show-distance="10"
+          data-show-delay="150"
+        >
+          lifestyle - 05 may, 2020
+        </div>
+        <h1
+          class="h2 mb-n10 show-on-scroll"
+          data-show-duration="500"
+          data-show-distance="10"
+        >
+          {{ .Title }}
+        </h1>
+      </div>
+    </div>
+    <div class="row justify-content-center gh-1 mb-100">
+      <div class="col-lg-8 post-content">{{ .Content }}</div>
+    </div>
+  </div>
+</div>
+
+{{ end }}
