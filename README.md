@@ -17,7 +17,7 @@
 3. Install npm dependencies at digitalmag/themes/digit
 
 ```bash
-  cd digital/themes/digit
+  cd digitalmag/themes/digit
   npm install
 ```
 
