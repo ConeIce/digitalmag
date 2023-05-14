@@ -17,33 +17,25 @@
     </item>
     
     <item>
-      <title>new2</title>
-      <link>http://example.org/blogs/new2/</link>
-      <pubDate>Sun, 07 May 2023 22:55:51 +0530</pubDate>
-      
-      <guid>http://example.org/blogs/new2/</guid>
-      <description>new contetn
-2asd
-123 Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur vel modi deserunt hic architecto eos illum dolorem ipsum deleniti neque recusandae dolores, commodi sint accusantium, totam, temporibus illo cupiditate provident! Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur vel modi deserunt hic architecto eos illum dolorem ipsum deleniti neque recusandae dolores, commodi sint accusantium, totam, temporibus illo cupiditate provident! Lorem ipsum dolor sit amet consectetur adipisicing elit.</description>
-    </item>
-    
-    <item>
       <title>The Perfect Love</title>
       <link>http://example.org/poems/theperfectlove/</link>
       <pubDate>Sun, 07 May 2023 22:55:10 +0530</pubDate>
       
       <guid>http://example.org/poems/theperfectlove/</guid>
-      <description>Once you fell in it. You will never need to know, That love completes the feeling&amp;hellip;. Love is what we need, Love is what we have, Love is what we are Love never hurts anybody It is ourselves who hurts love The feeling of love starts from the birth It&amp;rsquo;s the first love It&amp;rsquo;s the true love It&amp;rsquo;s the &amp;lsquo;Mother&amp;rsquo;. Perfect love enables one to live without happiness And if when happiness accompanies love Ah!</description>
-    </item>
-    
-    <item>
-      <title>Thi si a post</title>
-      <link>http://example.org/thisisapost/</link>
-      <pubDate>Sun, 07 May 2023 22:55:10 +0530</pubDate>
-      
-      <guid>http://example.org/thisisapost/</guid>
-      <description>This is a porm
-a list item </description>
+      <description>Once you fell in it.
+You will never need to know,
+That love completes the feeling&amp;hellip;.
+Love is what we need,
+Love is what we have,
+Love is what we are
+Love never hurts anybody
+It is ourselves who hurts love
+The feeling of love starts from the birth
+It&amp;rsquo;s the first love
+It&amp;rsquo;s the true love
+It&amp;rsquo;s the &amp;lsquo;Mother&amp;rsquo;.
+Perfect love enables one to live without happiness
+And if when happiness accompanies love</description>
     </item>
     
   </channel>
