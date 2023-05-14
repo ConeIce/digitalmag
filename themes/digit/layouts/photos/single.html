@@ -1,0 +1,13 @@
+{{ define "main" }}
+<div class="p-10 flex flex-col items-center content-center">
+  <h1 class="text-4xl font-bold my-10">{{.Title}}</h1>
+  <h3 class="text-xl font-semibold">By {{.Params.author}}</h3>
+  <h3 class="text-xl mb-16 font-semibold">Semester {{.Params.semester}}</h3>
+  <div class="prose">{{.Content}}</div>
+
+  {{ range.Resources.ByType "image" }}
+  <img src="data:{{ .MediaType }};base64,{{ .Content | base64Encode }}" />
+  {{ end }}
+</div>
+
+{{ end }}
