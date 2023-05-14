@@ -1,5 +1,5 @@
 ---
-title: "The Perfect Love"
+title: "Evanescent"
 author: "Varsha Sabu"
 semester: 2
 date: 2023-05-07T22:55:10+05:30
@@ -38,6 +38,4 @@ To the stars above\
 And the dandelions below\
 I've no clue for how long I'll amuse at you\
 Cus one day I too will vanish away\
-And wish to be one among the stars like you.\
-
-
+And wish to be one among the stars like you.

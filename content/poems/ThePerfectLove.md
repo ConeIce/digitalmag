@@ -19,5 +19,4 @@ It's the true love\
 It's the 'Mother'.\
 Perfect love enables one to live without happiness\
 And if when happiness accompanies love\
-Ah! Then it's 'Heaven'\
-
+Ah! Then it's 'Heaven'
