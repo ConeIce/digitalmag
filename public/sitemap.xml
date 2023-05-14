@@ -2,13 +2,19 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://example.org/</loc>
+    <lastmod>2023-05-12T22:55:10+05:30</lastmod>
+  </url><url>
+    <loc>http://example.org/poems/</loc>
+    <lastmod>2023-05-12T22:55:10+05:30</lastmod>
+  </url><url>
+    <loc>http://example.org/poems/riseofai/</loc>
+    <lastmod>2023-05-12T22:55:10+05:30</lastmod>
+  </url><url>
     <loc>http://example.org/blogs/artificialintelligenceandunemployment/</loc>
     <lastmod>2023-05-07T22:55:51+05:30</lastmod>
   </url><url>
     <loc>http://example.org/blogs/</loc>
-    <lastmod>2023-05-07T22:55:51+05:30</lastmod>
-  </url><url>
-    <loc>http://example.org/</loc>
     <lastmod>2023-05-07T22:55:51+05:30</lastmod>
   </url><url>
     <loc>http://example.org/photos/ananthuraveendran/</loc>
@@ -17,10 +23,16 @@
     <loc>http://example.org/photos/</loc>
     <lastmod>2023-05-07T22:55:10+05:30</lastmod>
   </url><url>
-    <loc>http://example.org/poems/</loc>
+    <loc>http://example.org/poems/purpose/</loc>
+    <lastmod>2023-05-07T22:55:10+05:30</lastmod>
+  </url><url>
+    <loc>http://example.org/poems/evanescent/</loc>
     <lastmod>2023-05-07T22:55:10+05:30</lastmod>
   </url><url>
     <loc>http://example.org/poems/theperfectlove/</loc>
+    <lastmod>2023-05-07T22:55:10+05:30</lastmod>
+  </url><url>
+    <loc>http://example.org/poems/malayalam/</loc>
     <lastmod>2023-05-07T22:55:10+05:30</lastmod>
   </url><url>
     <loc>http://example.org/categories/</loc>
