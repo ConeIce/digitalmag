@@ -8,7 +8,11 @@
 - https://gohugo.io/installation/
 
 2. Clone the repo with this command
+
+```bash
    git clone https://github.com/ConeIce/digitalmag.git
+
+```
 
 3. Install npm dependencies at digitalmag/themes/digit
 
