@@ -1694,6 +1694,10 @@ input:checked + .toggle-bg {
   height: 2rem;
 }
 
+.h-\[300px\] {
+  height: 300px;
+}
+
 .w-1\/2 {
   width: 50%;
 }
@@ -1716,6 +1720,10 @@ input:checked + .toggle-bg {
 
 .w-7 {
   width: 1.75rem;
+}
+
+.w-\[300px\] {
+  width: 300px;
 }
 
 .w-full {
@@ -1796,6 +1804,10 @@ input:checked + .toggle-bg {
   resize: both;
 }
 
+.grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
 .grid-cols-4 {
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
@@ -1842,6 +1854,10 @@ input:checked + .toggle-bg {
 
 .justify-between {
   justify-content: space-between;
+}
+
+.gap-4 {
+  gap: 1rem;
 }
 
 .gap-8 {
@@ -2000,6 +2016,16 @@ input:checked + .toggle-bg {
 
 .bg-opacity-50 {
   --tw-bg-opacity: 0.5;
+}
+
+.object-contain {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.object-cover {
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .p-1 {
@@ -2488,6 +2514,10 @@ input:checked + .toggle-bg {
 
   .md\:w-auto {
     width: auto;
+  }
+
+  .md\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
   .md\:flex-row {
