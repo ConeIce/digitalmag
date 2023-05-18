@@ -1,12 +1,26 @@
 {{ define "main" -}}
-<div class="m-10">
-  {{- range.Pages }}
-  <div class="mb-10">
-    <h2 class="text-xl font-bold">{{.Title}}</h2>
-    <p>{{ .Summary }}</p>
-    <a class="block underline" href="{{ .RelPermalink }}">Read more</a>
+<section class="bg-white :bg-gray-900">
+  <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
+    <div class="mx-auto max-w-screen-sm text-center lg:mb-16 mb-8">
+      <h2
+        class="mb-4 text-3xl lg:text-4xl tracking-tight font-extrabold text-gray-900 :text-white"
+      >
+        {{.Title}}
+      </h2>
+    </div>
+    <div class="grid gap-8 lg:grid-cols-2">
+      {{- range.Pages }}
+      <div>
+        <h1 class="text-xl hover:underline">
+          <a href="{{.RelPermalink}}">{{.Title}}</a>
+        </h1>
+        <h3 class="font-bold text-slate-700">
+          {{.Params.author}} • Semester {{.Params.semester}}
+        </h3>
+      </div>
+      {{end}}
+    </div>
   </div>
+</section>
 
-  {{- end }}
-</div>
 {{- end }}
