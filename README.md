@@ -21,13 +21,13 @@
   npm install
 ```
 
-4. Run the tailwind watcher
+4. Run the tailwind watcher. Keep it running
 
 ```bash
    npm run watch
 ```
 
-5. cd back into digitalmag and run
+5. Open a new terminal window and cd back into digitalmag and run
 
 ```bash
    hugo
