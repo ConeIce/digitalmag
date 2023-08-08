@@ -9,7 +9,6 @@
       </h2>
     </div>
 
-    <!-- Year Buttons -->
     <div class="year-buttons mb-4">
       {{ $years := slice }} {{ range .Site.RegularPages }} {{ if eq .Section
       "blogs" }} {{ $year := .Params.year }} {{ if not (in $years $year) }} {{
@@ -32,7 +31,6 @@
       </div>
     </div>
 
-    <!-- Article List -->
     <div class="grid gap-8 lg:grid-cols-2">
       {{- range.Pages }}
       <div class="article" data-year="{{.Params.year}}">
@@ -49,7 +47,6 @@
 </section>
 
 <script>
-  // JavaScript function to filter articles based on the selected year
   function showArticlesByYear(year) {
     const articles = document.querySelectorAll(".article");
     articles.forEach((article) => {
