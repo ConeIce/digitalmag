@@ -2,7 +2,7 @@
 title: "Artificial Intelligence and Unemployment"
 author: "Rojins S Martin"
 semester: 2
-date: 2023-05-11T20:51:48+04:00
+year: 2022
 ---
 
 Artificial intelligence (AI) is rapidly changing the world, and its impact on the job market is one of the most significant concerns. Some experts believe that AI will lead to mass unemployment, as machines become capable of performing more and more tasks that are currently done by humans. Others argue that AI will create new jobs, as it opens up new possibilities for businesses and industries.

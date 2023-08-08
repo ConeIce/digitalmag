@@ -2,7 +2,7 @@
 title: "Cyber Warfare: The Looming International Threat"
 author: "Gibin M George"
 semester: 8
-date: 2023-05-11T17:56:46+04:00
+year: 2019
 ---
 
 Recent developments in cyber warfare have given rise to unprecedented and emerging threats. Cyber warfare encompasses offensive and defensive operations conducted in cyberspace, aiming to achieve strategic and tactical objectives such as disrupting critical infrastructure, gathering information, and disrupting communication systems. This type of warfare poses unique challenges due to its ever-evolving nature.

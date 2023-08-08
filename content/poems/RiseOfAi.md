@@ -2,7 +2,7 @@
 title: "Rise of AI"
 author: "Varsha Sabu"
 semester: 2
-date: 2023-05-12T22:55:10+05:30
+year: 2022
 ---
 
 In lines of code, immense strength takes hold,\

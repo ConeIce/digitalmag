@@ -2,7 +2,7 @@
 title: "Exploring AI Generator: Creating AI with Ease"
 author: "FAJR K"
 semester: 6
-date: 2022-11-10T18:11:46+04:00
+year: 2020
 ---
 
 AI is the latest buzzword in technology. It is a field of computer science that aims to create machines that can perform tasks normally requiring human intelligence, such as visual perception, speech recognition, and decision making. AI has been around for decades but has recently become more prevalent in the world of technology.

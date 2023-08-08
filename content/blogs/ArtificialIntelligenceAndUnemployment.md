@@ -1,6 +1,6 @@
 ---
 title: "Artificial Intelligence and Unemployment"
-date: 2023-05-07T22:55:51+05:30
+year: 2022
 author: "Rojins S Martin"
 semester: 2
 ---
@@ -45,4 +45,3 @@ brought about by AI:
   infrastructure, education, and research and development.
   By taking these steps, we can help to ensure that the benefits of AI are shared by
   everyone, and that no one is left behind.
-
