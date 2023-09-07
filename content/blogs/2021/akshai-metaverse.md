@@ -2,7 +2,7 @@
 title: "The Metaverse: Exploring a Virtual World of Endless Possibilities"
 author: "Akshai P Nambiar"
 semester: 4
-date: 2023-05-11T17:56:46+04:00
+year: 2021
 ---
 
 Recent studies have brought the concept of the metaverse into the spotlight as an ever-evolving virtual world that is captivating the internet. This immersive space allows users to interact, explore, and become part of something greater than themselves. The metaverse offers incredible opportunities, ranging from virtual businesses to forging meaningful relationships. It is a boundless realm where the possibilities are limitless.

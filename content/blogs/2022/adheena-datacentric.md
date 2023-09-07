@@ -2,7 +2,7 @@
 title: "What justifies the need for 'data-centric artificial intelligence'?"
 author: "Adheena S Dev"
 semester: 2
-date: 2023-05-11T19:47:26+04:00
+year: 2022
 ---
 
 The field of artificial intelligence has grown significantly over the past ten years. Large volumes of data were acquired by consumer internet providers and utilised to train potent machine learning programmes. For many commercial applications, machine learning algorithms are widely accessible; some are even open source.

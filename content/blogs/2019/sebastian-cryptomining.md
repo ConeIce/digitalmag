@@ -2,7 +2,7 @@
 title: "Crypto Mining: Unlocking Digital Wealth"
 author: "Sebastian P Gigi"
 semester: 8
-date: 2023-05-11T17:56:46+04:00
+year: 2019
 ---
 
 Cryptocurrency mining is a process that utilizes specialized computers to solve complex mathematical problems, creating new blocks and verifying transactions on the blockchain. This demanding process requires substantial computing power and energy, as miners compete for the right to add new blocks and earn associated rewards. To enhance their chances of success, many miners join mining pools and leverage low-cost electricity from renewable sources like hydroelectricity, solar, and wind.

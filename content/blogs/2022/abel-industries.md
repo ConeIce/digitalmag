@@ -2,7 +2,7 @@
 title: "The Rise of Artificial Intelligence: Revolutionizing Industries and Shaping the Future"
 author: "Abel Biju George"
 semester: 2
-date: 2023-05-11T09:58:52+04:00
+year: 2022
 ---
 
 Artificial Intelligence (AI) has emerged as one of the most transformative technologies of the 21st century. With its ability to simulate human intelligence and perform complex tasks, AI is revolutionizing industries, driving innovation, and reshaping the future in numerous ways. This article explores the impact of AI across various sectors and delves into its potential implications for society.

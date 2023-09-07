@@ -2,7 +2,7 @@
 title: "ChatGPT: Revolutionizing the World and Anticipating Future Challenges"
 author: "Rijo Biju"
 semester: 4
-date: 2022-11-10T18:11:46+04:00
+year: 2021
 ---
 
 In recent years, the emergence of advanced language models, such as ChatGPT, has sparked a new wave of technological advancements. ChatGPT, like the one you are interacting with right now, is an example of artificial intelligence (AI) that is transforming the way we communicate and interact with machines. This article explores how ChatGPT is making the world a better place while also addressing the potential disadvantages and challenges that may arise in the future.

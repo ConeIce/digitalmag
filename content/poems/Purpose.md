@@ -2,7 +2,7 @@
 title: "Purpose"
 author: "Patio Pierce"
 semester: 6
-date: 2023-05-07T22:55:10+05:30
+year: 2020
 ---
 
 The starless night which had come to be\

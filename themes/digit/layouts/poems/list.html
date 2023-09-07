@@ -1,0 +1,62 @@
+{{ define "main" -}}
+<section class="bg-white :bg-gray-900">
+  <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
+    <div class="mx-auto max-w-screen-sm text-center lg:mb-16 mb-8">
+      <h2
+        class="mb-4 text-3xl lg:text-4xl tracking-tight font-extrabold text-gray-900 :text-white"
+      >
+        Poems
+      </h2>
+    </div>
+
+    <div class="year-buttons mb-4">
+      {{ $years := slice }} {{ range .Site.RegularPages }} {{ if eq .Section
+      "blogs" }} {{ $year := .Params.year }} {{ if not (in $years $year) }} {{
+      $years = $years | append $year }} {{ end }} {{ end }} {{ end }}
+      <div class="buttons space-x-2">
+        <a
+          href="javascript:void(0);"
+          onclick="showArticlesByYear('all')"
+          class="year-button bg-gray-200 px-3 py-2 rounded-md"
+          >All</a
+        >
+        {{ range $years }}
+        <a
+          href="javascript:void(0);"
+          onclick="showArticlesByYear('{{ . }}')"
+          class="year-button bg-gray-200 px-3 py-2 rounded-md"
+          >{{ . }}</a
+        >
+        {{ end }}
+      </div>
+    </div>
+
+    <div class="grid gap-8 lg:grid-cols-2">
+      {{- range.Pages }}
+      <div class="article" data-year="{{.Params.year}}">
+        <h1 class="text-xl hover:underline">
+          <a href="{{.RelPermalink}}">{{.Title}}</a>
+        </h1>
+        <h3 class="font-bold text-slate-700">
+          {{.Params.author}} • Semester {{.Params.semester}}
+        </h3>
+      </div>
+      {{end}}
+    </div>
+  </div>
+</section>
+
+<script>
+  function showArticlesByYear(year) {
+    const articles = document.querySelectorAll(".article");
+    articles.forEach((article) => {
+      const articleYear = article.getAttribute("data-year");
+      if (year === "all" || articleYear === year) {
+        article.style.display = "block";
+      } else {
+        article.style.display = "none";
+      }
+    });
+  }
+</script>
+{{- end }}

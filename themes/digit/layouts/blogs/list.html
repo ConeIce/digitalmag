@@ -9,24 +9,34 @@
         Articles
       </h2>
     </div>
-    <div class="flex justify-center gap-4 mb-8">
-      <a href="/blogs/2019" class="year-button bg-gray-200 px-4 py-2 rounded">
-        2019-2023
-      </a>
-      <a href="/blogs/2020" class="year-button bg-gray-200 px-4 py-2 rounded">
-        2020-2024
-      </a>
-      <a href="/blogs/2021" class="year-button bg-gray-200 px-4 py-2 rounded">
-        2021-2025
-      </a>
-      <a href="/blogs/2022" class="year-button bg-gray-200 px-4 py-2 rounded">
-        2022-2026
-      </a>
+
+    <!-- Year Buttons -->
+    <div class="year-buttons mb-4">
+      {{ $years := slice }} {{ range .Site.RegularPages }} {{ if eq .Section
+      "blogs" }} {{ $year := .Params.year }} {{ if not (in $years $year) }} {{
+      $years = $years | append $year }} {{ end }} {{ end }} {{ end }}
+      <div class="buttons space-x-2">
+        <a
+          href="javascript:void(0);"
+          onclick="showArticlesByYear('all')"
+          class="year-button bg-gray-200 px-3 py-2 rounded-md"
+          >All</a
+        >
+        {{ range $years }}
+        <a
+          href="javascript:void(0);"
+          onclick="showArticlesByYear('{{ . }}')"
+          class="year-button bg-gray-200 px-3 py-2 rounded-md"
+          >{{ . }}</a
+        >
+        {{ end }}
+      </div>
     </div>
 
+    <!-- Article List -->
     <div class="grid gap-8 lg:grid-cols-2">
       {{- range.Pages }}
-      <div>
+      <div class="article" data-year="{{.Params.year}}">
         <h1 class="text-xl hover:underline">
           <a href="{{.RelPermalink}}">{{.Title}}</a>
         </h1>
@@ -39,4 +49,18 @@
   </div>
 </section>
 
+<script>
+  // JavaScript function to filter articles based on the selected year
+  function showArticlesByYear(year) {
+    const articles = document.querySelectorAll(".article");
+    articles.forEach((article) => {
+      const articleYear = article.getAttribute("data-year");
+      if (year === "all" || articleYear === year) {
+        article.style.display = "block";
+      } else {
+        article.style.display = "none";
+      }
+    });
+  }
+</script>
 {{- end }}

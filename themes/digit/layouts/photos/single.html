@@ -5,9 +5,45 @@
   <h3 class="text-xl mb-16 font-semibold">Semester {{.Params.semester}}</h3>
   <div class="prose">{{.Content}}</div>
 
-  {{ range.Resources.ByType "image" }}
-  <img src="data:{{ .MediaType }};base64,{{ .Content | base64Encode }}" />
-  {{ end }}
+  <div class="p-20 grid grid-cols-4 gap-10">
+    {{ with .Params.image_links }} {{ range . }}
+    <img
+      class="w-full h-full object-cover cursor-pointer hover:scale-105 transition-transform duration-300 transform rounded-lg"
+      src="{{ . }}"
+      alt="Image"
+      onclick="showModal('{{ . }}')"
+    />
+    {{ end }} {{ end }}
+  </div>
+
+  <div
+    id="modal"
+    class="hidden fixed top-0 left-0 z-80 w-screen h-screen bg-black/70 flex justify-center items-center"
+  >
+    <a
+      class="fixed z-90 top-6 right-8 text-white text-5xl font-bold"
+      href="javascript:void(0)"
+      onclick="closeModal()"
+      >×</a
+    >
+    <img
+      id="modal-img"
+      class="max-w-[800px] max-h-[600px] object-cover rounded-lg"
+    />
+  </div>
 </div>
 
+<script>
+  var modal = document.getElementById("modal");
+  var modalImg = document.getElementById("modal-img");
+
+  function showModal(src) {
+    modal.classList.remove("hidden");
+    modalImg.src = src;
+  }
+
+  function closeModal() {
+    modal.classList.add("hidden");
+  }
+</script>
 {{ end }}
