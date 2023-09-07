@@ -21,6 +21,18 @@ module.exports = {
           900: "#1e3a8a",
         },
       },
+      minHeight: {
+        "70vh": "70vh",
+      },
+      width: {
+        45: "45%",
+      },
+      screens: {
+        sm: "640px",
+        md: "768px",
+        lg: "1024px",
+        xl: "1280px",
+      },
     },
     fontFamily: {
       body: [
@@ -61,4 +73,3 @@ module.exports = {
   },
   plugins: [require("flowbite/plugin"), require("@tailwindcss/typography")],
 };
-
