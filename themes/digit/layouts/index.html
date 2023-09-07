@@ -1,377 +1,197 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta name="generator" content="Hugo 0.111.3" />
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>The 2022 Digital Magazine</title>
-    <link rel="stylesheet" href="/css/styles.css" />
-    <link rel="stylesheet" href="/style.css" />
-  </head>
-  <body>
-    <nav class="flex items-center justify-between text-white p-5">
-      <div class="flex justify-center items-center">
-        <img class="mr-2.5 h-12 w-12 rounded-md" src="/images/logo.jpg"></img>
-        <div class="mr-5">
-          <h2 class="m-0 text-black text-4xl font-bold hidden md:block">DigitalMagazine</h2>
-        </div>
+{{ define "main" }}
+
+<div class="m-3 mt-24">
+  <h1
+    class="text-center mb-2 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl"
+  >
+    The 2022 Digital Magazine
+  </h1>
+
+  <p class="text-center text-xl text-slate-600 mt-12">
+    Want to get straight into it? Start with an article, poem or some beautiful
+    photos
+  </p>
+
+  <div class="flex justify-center mt-10 text-xl text-slate-600">
+    <a href="/blogs" class="underline mr-10 text-green-500">Ariticles</a>
+    <a href="/poems" class="underline mr-10 text-red-600">Poems</a>
+    <a href="/photos" class="underline mr-10 text-blue-600">Photos</a>
+  </div>
+</div>
+
+<div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6 prose">
+  <h1>Peek Inside</h1>
+
+  <h3>In this page</h3>
+
+  <ol>
+    <li><a href="#team">Meet the team!</a></li>
+    {{ range (where .Site.Pages "Type" "messages") }} {{ range .Pages }}
+    <li><a href="#{{.Title}}">{{ .Title }}</a></li>
+    {{ end }} {{ end }}
+  </ol>
+
+  <h3>Articles</h3>
+  <ol>
+    {{ range (where .Site.Pages "Type" "blogs") }} {{ range .Pages }}
+    <li><a href="{{.RelPermalink}}">{{ .Title }}</a></li>
+    {{ end }} {{ end }}
+  </ol>
+
+  <h3>Poems</h3>
+  <ol>
+    {{ range (where .Site.Pages "Type" "poems") }} {{ range .Pages }}
+    <li><a href="{{.RelPermalink}}">{{ .Title }}</a></li>
+    {{ end }} {{ end }}
+  </ol>
+</div>
+
+<section class="bg-white dark:bg-gray-900" id="team">
+  <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
+    <div class="mx-auto max-w-screen-sm text-center mb-8 lg:mb-16">
+      <h2
+        class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white"
+      >
+        Our Team
+      </h2>
+      <p
+        class="font-light text-gray-500 lg:mb-16 sm:text-xl dark:text-gray-400"
+      >
+        We have a team!
+      </p>
+    </div>
+
+    <h2 class="text-2xl mt-16 mb-5 font-bold">Editorial board</h2>
+    <p class="mb-10">NEVER ask the board what it does</p>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+      <div>
+        <img
+          loading="lazy"
+          src="/team/Hazna R Mohammed.jpg"
+          alt=""
+          class="mb-5 w-[300px] h-[300px] object-cover"
+        />
+        <h3 class="font-bold">Hazna R Mohammed</h3>
+        <p>The brain behind it all</p>
       </div>
-      <ul class="list-none flex m-0 p-0">
-        <li class="ml-0"><a class="text-black no-underline text-lg" href="#home">Home</a></li>
-        <li class="ml-5"><a class="text-black no-underline text-lg" href="/blogs/">Articles</a></li>
-        <li class="ml-5"><a class="text-black no-underline text-lg" href="/poems/">Poems</a></li>
-        <li class="ml-5"><a class="text-black no-underline text-lg" href="/photos/">Photos</a></li>
-      </ul>
-    </nav>
-
-
-    <main class="text-center p-5">
-      <div class="flex flex-col justify-center items-center min-h-50vh max-h-80vh bg-gray-200 bg-opacity-20">
-        <div class="mt-24 text-black">
-          <h1 class="text-5xl text-center md:text-6xl">The 2022 Digital Magazine</h1>
-        </div>
-        <div class="mt-5 mb-24 text-3xl text-gray-700">
-          <p class="hidden text-center text-4xl md:block">
-            Want to get straight into it? Start with an article, poem, or some
-            beautiful photos.
-          </p>
-        </div>
+      <div>
+        <img
+          loading="lazy"
+          src="/team/IMG_20230507_070703_759.jpg"
+          alt=""
+          class="mb-5 w-[300px] h-[300px] object-cover"
+        />
+        <h3 class="font-bold">Edwin Robert Perrera</h3>
+        <p>The brain behind it all</p>
       </div>
-
-      <div class="min-h-70vh">
-        <div class="flex flex-wrap justify-between bg-gradient-to-r from-[rgba(247,139,7,0.6)] to-[rgba(34,154,254,0.6)] p-8">
-          {{ range (where .Site.Pages "Type" "messages") }} {{ range .Pages }}
-              <div class="p-5 rounded-lg w-full md:w-1/2">
-                <blockquote class="blocky text-2xl italic text-black mb-5">
-                  {{.Params.subtitle}}
-                </blockquote>
-                <div class="flex items-center justify-center">
-                  <img class="block w-7 h-7 rounded-full mb-2.5 mr-2.5" src="path_to_image2.jpg" />
-                  <p>{{.Params.author}} | {{.Params.jobTitle}}</p>
-                </div>
-              </div>
-            {{ end }}
-          {{ end }}
-        </div>
+      <div>
+        <img
+          loading="lazy"
+          src="/team/FAJR K (S6).JPG"
+          alt=""
+          class="mb-5 w-[300px] h-[300px] object-cover"
+        />
+        <h3 class="font-bold">Fajr K</h3>
+        <p>The brain behind it all</p>
       </div>
-      
-      
-      <div id="myModal" class="hidden fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center">
-        <div class="bg-white p-4 rounded-lg w-4/5 md:1/2">
-          <p id="modal-content"></p>
-        </div>
+      <div>
+        <img
+          loading="lazy"
+          src="/team/Dona Mariya Benny S6.jpg"
+          alt=""
+          class="mb-5 w-[300px] h-[300px] object-cover"
+        />
+        <h3 class="font-bold">Dona Mariya Benny</h3>
+        <p>The brain behind it all</p>
       </div>
-      
+    </div>
 
-      <div class="h-full bg-gray-200 bg-opacity-20">
-        <div class="text-center p-7 rounded-lg my-12">
-          <h2 class="font-bold text-4xl">Our Team</h2>
-          <p>We have a team!</p>
-
-          <div class="rounded-lg">
-            <div class="text-left my-5 pl-5 pt-2.5">
-              <h3 class="text-left font-bold text-2xl mt-8">Editorial board</h3>
-              <p class="text-left">NEVER ask the board what it does</p>
-            </div>
-
-            <div class="flex flex-wrap justify-start rounded-lg mt-5">
-              <div class="w-auto h-auto ml-5 text-center rounded-lg">
-                <img
-                class="block w-32 h-32 rounded-lg md:w-48 h-48"
-                  src="/images/team/Hazna R Mohammed.jpg"
-                  alt="Person 1"
-                />
-                <h4 class="text-left font-bold">Hazna R Mohammed</h4>
-                <p class="text-left">The brain behind it all</p>
-              </div>
-              <div class="w-auto h-auto ml-5 text-center rounded-lg">
-                <img
-                  src="/images/team/Edwin Robert.jpg"
-                  alt="Person 2"
-                  class="block w-32 h-32 rounded-lg md:w-48 h-48"
-                />
-                <h4 class="text-left font-bold">Edwin Robert Perrera</h4>
-                <p class="text-left">The brain behind it all</p>
-              </div>
-              <div class="w-auto h-auto ml-5 mt-5 text-center rounded-lg md:mt-0">
-                <img
-                  src="/images/team/FAJR K (S6).JPG"
-                  alt="Person 3"
-                  class="block w-32 h-32 rounded-lg md:w-48 h-48"
-                />
-                <h4 class="font-bold text-left">Fajr K</h4>
-                <p class="text-left">The brain behind it all</p>
-              </div>
-              <div class="w-auto h-auto ml-5 mt-5 text-center rounded-lg md:mt-0">
-                <img
-                  src="/images/team/Dona Mariya Benny S6.jpg"
-                  alt="Person 4"
-                  class="block w-32 h-32 rounded-lg md:w-48 h-48"
-                />
-                <h4 class="text-left font-bold">Dona Mariya Benny</h4>
-                <p class="text-left">The brain behind it all</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="rounded-lg">
-            <div class="text-left my-5 p-5 pt-2.5">
-              <h2 class="text-left font-bold text-2xl mt-8">The web team</h2>
-              <p class="text-left">
-                We built this website. The design is not blowing any minds. We
-                know
-              </p>
-            </div>
-
-            <div class="flex flex-wrap justify-start rounded-lg mt-5">
-              <div class="w-auto h-auto ml-5 text-center rounded-lg">
-                <img
-                  src="/images/team/Akhil L (s4).png"
-                  alt="Person 5"
-                  class="block w-32 h-32 rounded-lg md:w-48 h-48"
-                />
-                <h4 class="text-left font-bold">Akhil L</h4>
-                <p class="text-left">The brain behind it</p>
-              </div>
-              <div class="w-auto h-auto ml-5 text-center rounded-lg">
-                <img
-                  src="/images/team/rijo.jpg"
-                  alt="Person 6"
-                  class="block w-32 h-32 rounded-lg md:w-48 h-48"
-                />
-                <h4 class="text-left font-bold">Rijo Biju</h4>
-                <p class="text-left">The brain behind it all</p>
-              </div>
-              <div class="w-auto h-auto ml-4 mt-5 text-center rounded-lg md:mt-0">
-                <img
-                  src="/images/team/Muhammed Salman S4.jpg"
-                  alt="Person 7"
-                  class="block w-32 h-32 rounded-lg md:w-48 h-48"
-                />
-                <h4 class="text-left font-bold">Muhammed Salman</h4>
-                <p class="text-left">The brain behind it all</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="rounded-lg">
-            <div class="text-left my-5 p-5 pt-2.5">
-              <h2 class="text-left font-bold text-2xl mt-8">The publicity team</h2>
-              <p>
-                If this website is to be found in the depths of the internet,
-                these guys are to blame
-              </p>
-            </div>
-
-            <div class="flex flex-wrap justify-start rounded-lg mt-5">
-              <div class="w-auto h-auto ml-5 text-center rounded-lg">
-                <img
-                  src="/images/team/Gladson Mathew S4_.jpg"
-                  alt="Person 5"
-                  class="block w-32 h-32 rounded-lg md:w-48 h-48"
-                />
-                <h4 class="text-left font-bold">Gladson Mathew</h4>
-                <p>The brain behind it</p>
-              </div>
-              <div class="w-auto h-auto ml-5 text-center rounded-lg">
-                <img
-                  src="/images/team/Meenakshy Bijukumar s4.jpg"
-                  alt="Person 6"
-                  class="block w-32 h-32 rounded-lg md:w-48 h-48"
-                />
-                <h4 class="text-left font-bold">Meenakshy Bijukumar</h4>
-                <p>The brain behind it all</p>
-              </div>
-              <div class="w-auto h-auto ml-5 mt-5 text-center rounded-lg md:mt-0">
-                <img
-                  src="/images/team/Merin John Kalapurackal S6.jpeg"
-                  alt="Person 7"
-                  class="block w-32 h-32 rounded-lg md:w-48 h-48"
-                />
-                <h4 class="text-left font-bold">Merin John</h4>
-                <p class="text-left">The brain behind it all</p>
-              </div>
-              <div class="w-auto h-auto mt-5 ml-5 text-center rounded-lg md:mt-0">
-                <img
-                  src="path_to_image7.jpg"
-                  alt="Person 7"
-                  class="block w-32 h-32 rounded-lg md:w-48 h-48"
-                />
-                <h4 class="text-left font-bold">Josh K Jayan</h4>
-                <p class="text-left">The brain behind it all</p>
-              </div>
-            </div>
-          </div>
-        </div>
+    <h2 class="text-2xl mt-16 mb-3 font-bold">The web team</h2>
+    <p class="mb-10">
+      We built this website. The design is not blowing any minds.
+      <a href="https://motherfuckingwebsite.com/">We know</a>
+    </p>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+      <div>
+        <img
+          loading="lazy"
+          src="/team/Akhil L (s4).png"
+          alt=""
+          class="mb-5 w-[300px] h-[300px] object-cover"
+        />
+        <h3 class="font-bold">Akhil L</h3>
+        <p>The brain behind it</p>
       </div>
-    </main>
+      <div>
+        <img
+          loading="lazy"
+          src="/team/rijo.jpg"
+          alt=""
+          class="mb-5 w-[300px] h-[300px] object-cover"
+        />
+        <h3 class="font-bold">Rijo Biju</h3>
+        <p>The brain behind it all</p>
+      </div>
+      <div>
+        <img
+          loading="lazy"
+          src="/team/Muhammed Salman S4.jpg"
+          alt=""
+          class="mb-5 w-[300px] h-[300px] object-cover"
+        />
+        <h3 class="font-bold">Muhammed Salman</h3>
+        <p>The brain behind it all</p>
+      </div>
+    </div>
 
-    <script>
-      // Get the modal element and the modal content element
-const modal = document.getElementById("myModal");
-const modalContent = document.getElementById("modal-content");
+    <h2 class="text-2xl mt-16 mb-3 font-bold">The publicity team</h2>
+    <p class="mb-10">
+      If this website is to be found in the depths of the internet, these guys
+      are to blame
+    </p>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+      <div>
+        <img
+          loading="lazy"
+          src="/team/Gladson Mathew S4_.jpg"
+          alt=""
+          class="mb-5 w-[300px] h-[300px] object-cover"
+        />
+        <h3 class="font-bold">Gladson Mathew</h3>
+        <p>The brain behind it</p>
+      </div>
+      <div>
+        <img
+          loading="lazy"
+          src="/team/Meenakshy Bijukumar s4.jpg"
+          alt=""
+          class="mb-5 w-[300px] h-[300px] object-cover"
+        />
+        <h3 class="font-bold">Meenakshy Bijukumar</h3>
+        <p>The brain behind it all</p>
+      </div>
+      <div>
+        <img
+          loading="lazy"
+          src="/team/Merin John Kalapurackal S6.jpeg"
+          alt=""
+          class="mb-5 w-[300px] h-[300px] object-cover"
+        />
+        <h3 class="font-bold">Merin John Kalapurackal</h3>
+        <p>The brain behind it all</p>
+      </div>
+      <div>
+        <img
+          loading="lazy"
+          src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/bonnie-green.png"
+          alt=""
+          class="mb-5 w-[300px] h-[300px] object-cover"
+        />
+        <h3 class="font-bold">Josh K Jayan</h3>
+        <p>The brain behind it all</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-// Define your quotes data as a JSON object
-const quotesData = [
-  {
-    quote: `Education has never been just about learning certain subjects and doing well in exams; rather it is a peek into the way of life and a powerful tool which can conquer great accomplishments.`,
-    text: `Education has never been just about learning certain subjects and doing well in exams; rather it is a
-peek into the way of life and a powerful tool which can conquer great accomplishments. Our
-prestigious institution strives to shape a generation that is capable to take up on the challenges put
-forward by the modern world. We have always tried to inculcate divergent thinking and creativity
-among our students. The Digital magazine crafted by the Department of Information Technology will
-truly help unfold a wide spectrum of creative skills. The magazine is not only just a result of the
-strenuous efforts of the editorial board and students but also the committed and supportive
-management and staff. It is truly an achievement worth emulating.
-I offer my well wishes to the department and hope to see more of such contributions.`
-  },
-  {
-    quote: `I am extremely proud to lead the Information Technology Department at Amal Jyothi College of Engineering. Our department is dedicated to providing students with the knowledge and skills  necessary to succeed in the ever-evolving field of technology. Our faculty and staff work tirelessly to ensure that our students receive the best education possible and are well-prepared to tackle the challenges of the future.`,
-    text: `Dear all,
-
-I am extremely proud to lead the Information Technology Department at Amal Jyothi College of
-Engineering. Our department is dedicated to providing students with the knowledge and skills
-necessary to succeed in the ever-evolving field of technology. Our faculty and staff work tirelessly to
-ensure that our students receive the best education possible and are well-prepared to tackle the
-challenges of the future.
-
-We are thrilled to introduce our IT department&#39;s first-ever digital magazine, XXXX. This magazine
-provides a platform for our students to showcase their creative potential and innovative thinking.
-The articles in this edition cover a wide range of topics, from academics to society and literature. I
-am confident that this magazine will not only inspire our students but also provide valuable insights
-for readers about the latest technology trends.
-
-We want to express my gratitude to the team that worked tirelessly to bring this magazine to life.
-From the student editor to each team member, their dedication and teamwork were truly
-impressive. This magazine would not have been possible without their hard work and commitment. I
-am excited to see what future editions of XXXX will bring and how our team will continue to
-collaborate to bring the best possible content to our readers.
-
-Best regards,\
-Dr Shiju George\
-HOD, Information Technology\
-Amal Jyothi College of Engineering`
-  },
-  {
-    quote: `I am happy to note that the students of the Information Technology Department, Amal Jyothi College of Engineering, are starting a digital magazine in this month of October 2023.`,
-    text: `I am happy to note that the students of the Information Technology Department, Amal Jyothi
-College of Engineering, are starting a digital magazine in this month of October 2022.
-As we know the Program Outcomes (POs) in the outcome based education (OBE) paradigm form a
-set of parameters indicative of the graduate’s potential to acquire competence to practice at the
-appropriate level. Student magazines have a great role in attaining certain POs such as effective
-communication by being able to comprehend and write effective reports, design documentation,
-and make effective presentations. Also, they help for functioning effectively as an individual and as a
-member or leader in diverse teams.
-
-Student magazines aim to bring the creative and daring side of each student and help them to
-express their thoughts and skills; and can be instrumental in shaping opinion, perspective, and
-debate—all of which are invaluable when entering the workplace and contributing to society.
-Students need an outlet for their creativity, ideas, and developing critical thinking skill. A digital
-magazine can provide the basis to learn, embrace, or refine these skills.
-I congratulate the staff and students who put painstaking effort in bringing out this first edition; and
-I wish them the very best for its grand success.
-
-Dr. Lillykutty Jacob
-Principal
-`},
-  {
-    quote: `In today’s world, a man with information has the power to turn the wheels of fortune. Information technology has been the main catalyst to make the existence of mankind simpler, smoother and easier.`,
-    text: `Hello All,
-
-In today’s world, a man with information has the power to turn the wheels of fortune. Information
-technology has been the main catalyst to make the existence of mankind simpler, smoother and
-easier. In fact, IT challenges the competence of individuals and motivates them to come up with
-ideas that can transform the structure of human life. It gives me immense pleasure to introduce the
-first ever magazine of Information Technology Department, Amal Jyothi College of Engineering in the
-digital format.
-XXXX&#39; provides a platform for our students to express their thoughts on various issues pertaining to
-academics, society, literature etc. and ignites the minds to generate constructive inputs/ideas to
-bring all round growth and development. Thus it was our job to ensure inspiring ideas are being
-brought to the students of IT, by the students of IT itself. The spectrum of articles gives us a sense of
-pride that our students possess creative, potential and novel thinking in ample measures. I applaud
-the contributors for their stimulated thoughts and varied hues in the content delivered by them.
-
-Our endeavor with each edition is to update you on the latest trends of technologies coming up and
-flashing some light on the innovative minds of the youth today. Lastly, quoting my special thanks to
-our Head of Department, Dr. Shiju George for his support and guidance all along, the departmental
-faculty and non faculty members for being an inspiration.
-
-A special acknowledgement is owed to the student editor and various team members for their
-commendable job.Everything from the collection of articles right down to the final edits was smooth
-sailing only because of their sheer support.I would like to thank every member without whose
-contribution, this issue would not have been possible.
-
-My best wishes to all the readers for scaling bigger success and achieving new heights in the coming
-days.
-
-Thankfully
-
-Dr. Nikhila T. Suresh
-Assistant Professor
-IT Department
-Amal Jyothi College of Engineering
-Kanjirappally, Kottayam Dt, Kerala
-India Pin - 686518 | www.amaljyothi.ac.in`
-  },
-  {
-    quote: `It gives us immense joy and satisfaction to finally introduce our very own digital magazine “ITerno”. Just like the gods and the asuras churned the ocean of milk to extract the nectar, we have tried to churn out creativity from the mass of our students.`,
-text: `It gives us immense joy and satisfaction to finally introduce our very own digital magazine “ITerno”.
-Just like the gods and the asuras churned the ocean of milk to extract the nectar, we have tried
-to churn out creativity from the mass of our students.
-Amidst the busy schedule of a 4-month semester, with 3-exams, practicals and all those
-assignments and problem sheets that make you want to bang your
-head on the wall, we tend to lose track of all the other simpler things
-that we are capable of and the things that we could have been proud of.
-So this time we have made an attempt to bring out the talents concealed within our students.
-It publishes well-written technical and non-technical works . The content also includes
-artworks in the form of drawings, photography, etc.
-As you scan through, you will meet dedicated and talented students, in the
-pages of this issue.
-The budding talents of our department have expressed their
-ideas and talents in a very creative way.
-A lot of effort has gone into the making of it.
-We hope you enjoy reading “ITerno”.`
-  }
-  // Add more quotes here
-];
-
-// Get all quote elements
-const quotes = document.querySelectorAll(".blocky");
-
-// Add a click event listener to each quote element
-quotes.forEach((quote) => {
-  quote.addEventListener("click", () => {
-    // Get the text of the clicked quote
-    const quoteText = quote.textContent;
-    const newQuoteText = quoteText.replace(/ /g, "")
-    console.log(newQuoteText)
-
-    // Find the corresponding text in the quotes data
-    const data = quotesData.find((item) => {
-      const newQuote = item.quote.replace(/ /g, "")
-      console.log(newQuote)
-      return newQuoteText.includes(newQuote)
-    }
-      );
-
-    // Set the modal content to the corresponding text
-    if (data) {
-      modalContent.textContent = data.text;
-    } else {
-      modalContent.textContent = "No corresponding text found";
-    }
-
-    // Show the modal
-    modal.classList.remove("hidden");
-  });
-});
-
-// Add a click event listener to the modal to close it when clicked
-modal.addEventListener("click", () => {
-  modal.classList.add("hidden");
-});
-
-    </script>
-    
-  </body>
-</html>
+{{partial "message.html" .}} {{ end }}
