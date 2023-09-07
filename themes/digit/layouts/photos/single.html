@@ -5,7 +5,7 @@
   <h3 class="text-xl mb-16 font-semibold">Semester {{.Params.semester}}</h3>
   <div class="prose">{{.Content}}</div>
 
-  <div class="grid grid-cols-1 gap-1 md:p-20 grid-cols-4 gap-10">
+  <div class="p-20 grid grid-cols-4 gap-10">
     {{ with .Params.image_links }} {{ range . }}
     <img
       class="w-full h-full object-cover cursor-pointer md:hover:scale-105 transition-transform duration-300 transform rounded-lg"
