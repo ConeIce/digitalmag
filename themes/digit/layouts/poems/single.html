@@ -1,10 +1,16 @@
 {{ define "main" }}
-<div class="max-w-screen-xl px-16 py-8 mx-auto lg:py-16 lg:px-6">
+<div class="max-w-screen-xl px-5 py-8 mx-auto lg:py-16 lg:px-6">
   <h1 class="text-4xl font-bold my-10 mb-8">{{.Title}}</h1>
   <h3 class="text-xl font-semibold">By {{.Params.author}}</h3>
-  <h3 class="text-xl mb-16 font-semibold">Semester {{.Params.semester}}</h3>
+  <h3 class="text-xl mb-12 font-semibold">Semester {{.Params.semester}}</h3>
 
-  <div class="prose">{{.Content}}</div>
+  {{ if isset .Params "audio" }}
+  <audio controls>
+    <source src="/audio/hazna.m4a" type="audio/mpeg" />
+    Your browser does not support the audio element.
+  </audio>
+  {{ end }}
+
+  <div class="prose mt-10">{{.Content}}</div>
 </div>
-
 {{ end }}
