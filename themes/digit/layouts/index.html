@@ -19,7 +19,7 @@
 
   <div class="min-h-70vh">
     <div
-      class="flex flex-wrap justify-between bg-gradient-to-r from-[rgba(247,139,7,0.6)] to-[rgba(34,154,254,0.6)] p-8"
+      class="p-10 flex flex-wrap justify-between bg-gradient-to-r from-[rgba(247,139,7,0.6)] to-[rgba(34,154,254,0.6)] p-8"
     >
       {{ range (where .Site.Pages "Type" "messages") }} {{ range .Pages }}
       <div class="p-5 rounded-lg w-full md:w-1/2">
@@ -28,10 +28,10 @@
             {{.Params.subtitle}}
           </blockquote>
         </a>
-        <div class="flex items-center justify-center">
+        <div class="mb-10 flex items-center justify-center">
           <img
             class="block w-7 h-7 rounded-full mb-2.5 mr-2.5"
-            src="path_to_image2.jpg"
+            src="{{ .Params.image }}"
           />
           <p>{{.Params.author}} | {{.Params.jobTitle}}</p>
         </div>

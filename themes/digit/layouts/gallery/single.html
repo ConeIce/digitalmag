@@ -10,7 +10,7 @@
   {{ end }} {{ end }}
 </div>
 
-<div class="p-5 flex flex-col items-center content-center">
+<div class="p-10 flex flex-col items-center content-center">
   <div class="block md:grid grid-cols-3 gap-10 w-full h-full">
     {{- $images := .Resources.ByType "image" -}} {{ range $images }} {{ if not
     (strings.Contains .RelPermalink "faculty") }} {{ $year := index (split

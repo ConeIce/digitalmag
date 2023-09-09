@@ -5,6 +5,7 @@ jobTitle: "Student Editor"
 subtitle: "It gives us immense joy and satisfaction to finally introduce our very own digital magazine “ITerno”.
 Just like the gods and the asuras churned the ocean of milk to extract the nectar, we have tried
 to churn out creativity from the mass of our students."
+image: "/images/faculty/Ashly George.jpg"
 ---
 
 It gives us immense joy and satisfaction to finally introduce our very own digital magazine “ITerno”.

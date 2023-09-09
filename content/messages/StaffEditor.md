@@ -5,6 +5,7 @@ jobTitle: "Assistant Professor"
 subtitle: "In today’s world, a man with information has the power to turn the wheels of fortune. Information
 technology has been the main catalyst to make the existence of mankind simpler, smoother and
 easier."
+image: "/images/faculty/Dr. Nikhila T suresh.jpg"
 ---
 
 Hello All,

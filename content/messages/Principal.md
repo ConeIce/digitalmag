@@ -4,6 +4,7 @@ author: "Dr. Lillykutty Jacob"
 jobTitle: "Principal"
 subtitle: "I am happy to note that the students of the Information Technology Department, Amal Jyothi
 College of Engineering, are starting a digital magazine in this month of October 2023."
+image: "/images/faculty/Ashly George.jpg"
 ---
 
 I am happy to note that the students of the Information Technology Department, Amal Jyothi

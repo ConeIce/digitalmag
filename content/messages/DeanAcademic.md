@@ -4,6 +4,7 @@ author: "No name Jo"
 jobTitle: "Dean Academic"
 subtitle: "Education has never been just about learning certain subjects and doing well in exams; rather it is a
 peek into the way of life and a powerful tool which can conquer great accomplishments."
+image: "/images/faculty/Ashly George.jpg"
 ---
 
 Education has never been just about learning certain subjects and doing well in exams; rather it is a

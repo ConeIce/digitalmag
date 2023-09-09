@@ -7,6 +7,7 @@ Engineering. Our department is dedicated to providing students with the knowledg
 necessary to succeed in the ever-evolving field of technology. Our faculty and staff work tirelessly to
 ensure that our students receive the best education possible and are well-prepared to tackle the
 challenges of the future."
+image: "/images/faculty/Dr. Shiju George.jpg"
 ---
 
 Dear all,
