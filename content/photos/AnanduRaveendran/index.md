@@ -1,5 +1,5 @@
 ---
-title: "AnanduRaveendran"
+title: "Anime Aesthetics"
 author: "Anandu Raveendran"
 semester: 2
 year: 2022

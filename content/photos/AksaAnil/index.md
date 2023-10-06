@@ -1,5 +1,5 @@
 ---
-title: "AnanduRaveendran"
+title: "Cinematic Icons Captured"
 author: "Aksa Anil"
 semester: 2
 year: 2022

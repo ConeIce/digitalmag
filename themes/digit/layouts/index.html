@@ -1,5 +1,15 @@
 {{ define "main" }}
 
+<style>
+  .quote:nth-child(7) {
+    flex-grow: 1; /* Make the fifth quote box take up all available space in the container */
+  }
+
+  .quote:nth-child(8) {
+    display: none; /* Make the fifth quote box take up all available space in the container */
+  }
+</style>
+
 <main class="text-center">
   <div
     class="flex flex-col justify-center items-center min-h-50vh max-h-80vh bg-gray-200 bg-opacity-20"
@@ -19,13 +29,14 @@
 
   <div class="min-h-70vh">
     <div
-      class="p-10 flex flex-wrap justify-between bg-gradient-to-r from-[rgba(247,139,7,0.6)] to-[rgba(34,154,254,0.6)] p-8"
+      class="flex flex-wrap justify-between bg-gradient-to-r from-[rgba(247,139,7,0.6)] to-[rgba(34,154,254,0.6)]"
     >
-      {{ range (where .Site.Pages "Type" "messages") }} {{ range .Pages }}
-      <div class="p-5 rounded-lg w-full md:w-1/2">
+      {{ $messages := where .Site.Pages "Type" "messages" }} {{ $sortedMessages
+      := $messages.ByWeight }} {{ range $sortedMessages }}
+      <div class="quote p-10 rounded-lg w-full md:w-1/2">
         <a href="{{ .Permalink }}" class="quote-link">
           <blockquote class="blocky text-1xl italic text-black mb-5">
-            {{.Params.subtitle}}
+            {{ .Params.subtitle }}
           </blockquote>
         </a>
         <div class="mb-10 flex items-center justify-center">
@@ -33,10 +44,10 @@
             class="block w-7 h-7 rounded-full mb-2.5 mr-2.5"
             src="{{ .Params.image }}"
           />
-          <p>{{.Params.author}} | {{.Params.jobTitle}}</p>
+          <p>{{ .Params.author }} | {{ .Params.jobTitle }}</p>
         </div>
       </div>
-      {{ end }} {{ end }}
+      {{ end }}
     </div>
   </div>
 
@@ -49,90 +60,92 @@
     </div>
   </div>
 
-  <div class="h-full bg-gray-200 bg-opacity-20">
-    <div class="text-center rounded-lg mt-10">
+  <div class="h-full bg-gray-200 bg-opacity-20 mb-10">
+    <div class="text-center rounded-lg">
       <h2 class="font-bold text-2xl pt-8 pl-10 pr-10">Our Team</h2>
 
       <div class="rounded-lg">
         <div class="text-left pl-5">
-          <h3 class="text-left font-semibold text-1xl mt-10">
+          <h3 class="text-left font-semibold text-1xl mt-10 mb-5">
             Editorial board
           </h3>
         </div>
 
-        <div class="flex flex-wrap justify-start rounded-lg mt-5">
-          <div class="w-auto h-auto ml-5 text-center rounded-lg">
+        <div class="grid grid-cols-2 gap-2 md:grid-cols-5 gap-1">
+          <div class="mb-5">
             <img
-              class="block w-28 h-24 rounded-lg md:w-48 h-44"
+              class="p-5 w-30 h-28 object-cover rounded-full m-auto md:w-48 h-48"
               src="/images/team/Hazna R Mohammed.jpg"
-              alt="Person 1"
+              alt="Image"
             />
-            <h4 class="text-left font-medium mt-3">Hazna Mohammed</h4>
-            <p class="text-left text-sm">The brain behind it all</p>
+            <h4 class="text-center font-medium mt-3">Hazna Mohammed</h4>
+            <p class="text-center text-sm">The brain behind it all</p>
           </div>
-          <div class="w-auto h-auto ml-5 text-center rounded-lg">
+          <div>
             <img
-              src="/images/team/Edwin Robert (Custom).jpg"
-              alt="Person 2"
-              class="block w-28 h-24 rounded-lg md:w-48 h-44"
+              class="p-5 w-30 h-30 object-cover rounded-full m-auto md:w-48 h-48"
+              src="/images/team/Edwin Robert.jpg"
+              alt="Image"
             />
-            <h4 class="text-left font-medium mt-3">Edwin Robert</h4>
-            <p class="text-left text-sm">The brain behind it all</p>
+            <h4 class="text-center font-medium mt-3">Edwin Robert</h4>
+            <p class="text-center text-sm">The brain behind it all</p>
           </div>
-          <div class="w-auto h-auto ml-5 mt-5 text-center rounded-lg md:mt-0">
+          <div>
             <img
+              class="p-5 w-30 h-30 object-cover rounded-full m-auto md:w-48 h-48"
               src="/images/team/FAJR K (S6).JPG"
-              alt="Person 3"
-              class="block w-28 h-24 rounded-lg md:w-48 h-44"
+              alt="Image"
             />
-            <h4 class="font-medium text-left mt-3">Fajr K</h4>
-            <p class="text-left text-sm">The brain behind it all</p>
+            <h4 class="font-medium text-center mt-3">Fajr K</h4>
+            <p class="text-center text-sm">The brain behind it all</p>
           </div>
-          <div class="w-auto h-auto ml-5 mt-5 text-center rounded-lg md:mt-0">
+          <div>
             <img
+              class="p-5 w-30 h-30 object-cover rounded-full m-auto md:w-48 h-48"
               src="/images/team/Dona Mariya Benny S6.jpg"
-              alt="Person 4"
-              class="block w-28 h-24 rounded-lg md:w-48 h-44"
+              alt="Image"
             />
-            <h4 class="text-left font-medium mt-3">Dona Mariya</h4>
-            <p class="text-left text-sm">The brain behind it all</p>
+            <h4 class="text-center font-medium mt-3">Dona Mariya</h4>
+            <p class="text-center text-sm">The brain behind it all</p>
           </div>
         </div>
       </div>
+    </div>
 
-      <div class="rounded-lg">
-        <div class="text-left my-5 pl-5 pt-2.5">
-          <h2 class="text-left font-semibold text-1xl mt-8">The web team</h2>
+    <div class="rounded-lg">
+      <div class="text-left my-5 pl-5 pt-2.5">
+        <h2 class="text-left font-semibold text-1xl mt-8">The web team</h2>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-5 gap-1">
+        <div class="mb-5">
+          <img
+            class="p-5 w-30 h-30 object-cover rounded-full m-auto md:w-48 h-48"
+            src="/images/team/Akhil L (s4).png"
+            alt="Image"
+          />
+          <h4 class="text-center font-medium mt-3">Akhil L</h4>
+          <p class="text-center text-sm">The brain behind it</p>
         </div>
 
-        <div class="flex flex-wrap justify-start rounded-lg mt-5">
-          <div class="w-auto h-auto ml-5 text-center rounded-lg">
-            <img
-              src="/images/team/Akhil L (s4).png"
-              alt="Person 5"
-              class="block w-28 h-24 rounded-lg md:w-48 h-44"
-            />
-            <h4 class="text-left font-medium mt-3">Akhil L</h4>
-            <p class="text-left text-sm">The brain behind it</p>
-          </div>
-          <div class="w-auto h-auto ml-5 text-center rounded-lg">
-            <img
-              src="/images/team/rijo.jpg"
-              alt="Person 6"
-              class="block w-28 h-24 rounded-lg md:w-48 h-44"
-            />
-            <h4 class="text-left font-medium mt-3">Rijo Biju</h4>
-            <p class="text-left text-sm">The brain behind it all</p>
-          </div>
-          <div class="w-auto h-auto ml-4 mt-5 text-center rounded-lg md:mt-0">
-            <img
-              src="/images/team/Muhammed Salman S4.jpg"
-              alt="Person 7"
-              class="block w-28 h-24 rounded-lg md:w-48 h-44"
-            />
-            <h4 class="text-left font-medium mt-3">Muhammed Salman</h4>
-            <p class="text-left text-sm">The brain behind it all</p>
-          </div>
+        <div>
+          <img
+            class="p-5 w-30 h-30 object-cover rounded-full m-auto md:w-48 h-48"
+            src="/images/team/Rijo Biju.jpg"
+            alt="Image"
+          />
+          <h4 class="text-center font-medium mt-3">Rijo Biju</h4>
+          <p class="text-center text-sm">The brain behind it all</p>
+        </div>
+
+        <div>
+          <img
+            class="p-5 w-30 h-30 object-cover rounded-full m-auto md:w-48 h-48"
+            src="/images/team/Muhammed Salman S4.jpg"
+            alt="Image"
+          />
+          <h4 class="text-center font-medium mt-3">Muhammed Salman</h4>
+          <p class="text-center text-sm">The brain behind it all</p>
         </div>
       </div>
 
@@ -143,42 +156,45 @@
           </h2>
         </div>
 
-        <div class="flex flex-wrap justify-start rounded-lg mt-5">
-          <div class="w-auto h-auto ml-5 text-center rounded-lg">
+        <div class="grid grid-cols-2 gap-2 md:grid-cols-5 gap-1">
+          <div class="mb-5">
             <img
+              class="p-5 w-30 h-30 object-cover rounded-full m-auto md:w-48 h-48"
               src="/images/team/Gladson Mathew S4_.jpg"
-              alt="Person 5"
-              class="block w-28 h-24 rounded-lg md:w-48 h-44"
+              alt="Image"
             />
-            <h4 class="text-left font-medium mt-3">Gladson Mathew</h4>
-            <p class="text-left text-sm">The brain behind it</p>
+            <h4 class="text-center font-medium mt-3">Gladson Mathew</h4>
+            <p class="text-center text-sm">The brain behind it</p>
           </div>
-          <div class="w-auto h-auto ml-5 text-center rounded-lg">
+
+          <div>
             <img
+              class="p-5 w-30 h-30 object-cover rounded-full m-auto md:w-48 h-48"
               src="/images/team/Meenakshy Bijukumar s4.jpg"
-              alt="Person 6"
-              class="block w-28 h-24 rounded-lg md:w-48 h-44"
+              alt="Image"
             />
-            <h4 class="text-left font-medium mt-3">Meenakshy Bijukumar</h4>
-            <p class="text-left text-sm">The brain behind it all</p>
+            <h4 class="text-center font-medium mt-3">Meenakshy Bijukumar</h4>
+            <p class="text-center text-sm">The brain behind it all</p>
           </div>
-          <div class="w-auto h-auto ml-5 mt-5 text-center rounded-lg md:mt-0">
+
+          <div>
             <img
+              class="p-5 w-30 h-30 object-cover rounded-full m-auto md:w-48 h-48"
               src="/images/team/Merin John Kalapurackal S6.jpeg"
-              alt="Person 7"
-              class="block w-28 h-24 rounded-lg md:w-48 h-44"
+              alt="Image"
             />
-            <h4 class="text-left font-medium mt-3">Merin John</h4>
-            <p class="text-left text-sm">The brain behind it all</p>
+            <h4 class="text-center font-medium mt-3">Merin John</h4>
+            <p class="text-center text-sm">The brain behind it all</p>
           </div>
-          <div class="w-auto h-auto mt-5 ml-5 text-center rounded-lg md:mt-0">
+
+          <div>
             <img
-              src="path_to_image7.jpg"
-              alt="Person 7"
-              class="block w-28 h-24 rounded-lg md:w-48 h-44"
+              class="p-5 w-30 h-30 object-cover rounded-full m-auto md:w-48 h-48"
+              src="/images/team/Josh.jpg"
+              alt="Image"
             />
-            <h4 class="text-left font-medium mt-3">Josh K Jayan</h4>
-            <p class="text-left text-sm">The brain behind it all</p>
+            <h4 class="text-center font-medium mt-3">Josh K Jayan</h4>
+            <p class="text-center text-sm">The brain behind it all</p>
           </div>
         </div>
       </div>

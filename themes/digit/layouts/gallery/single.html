@@ -1,7 +1,7 @@
 {{ define "main" }}
 
 <div class="buttons flex items-center justify-center py-4 md:py-4 flex-wrap">
-  <button class="bg-gray-200 px-3 py-2 mr-5 rounded-md">All</button>
+  <button id="all" class="bg-gray-200 px-3 py-2 mr-5 rounded-md">All</button>
   {{ $galleryDir := "content/gallery" }} {{ $dirs := readDir $galleryDir }} {{
   range $dirs }} {{ if and .IsDir (ne .Name "faculty") }}
   <button class="bg-gray-200 px-3 py-2 mr-5 rounded-md" id="{{ .Name }}">
@@ -33,7 +33,7 @@
   </h2>
 </div>
 
-<div class="grid grid-cols-2 gap-4 md:grid-cols-5 gap-1">
+<div class="grid grid-cols-2 gap-4 md:grid-cols-5 gap-1 mb-10">
   {{ range .Resources.ByType "image" }} {{ if strings.Contains .RelPermalink
   "faculty" }}
   <div>
@@ -53,6 +53,22 @@
 <script>
   // Get all buttons and images
 
+  // Add similar event listeners for other years
+  window.addEventListener("load", function () {
+    // Get all images
+    let images = document.querySelectorAll(".image");
+
+    // Hide all images initially
+    for (let i = 0; i < images.length; i++) {
+      images[i].style.display = "none";
+    }
+
+    // Show only the first 3 images
+    for (let i = 0; i < 3; i++) {
+      images[i].style.display = "block";
+    }
+  });
+
   const buttons = document.querySelectorAll(".buttons button");
   const images = document.querySelectorAll(".image");
 
@@ -65,13 +81,10 @@
       images.forEach((image) => {
         const imageYear = image.getAttribute("data-year");
         console.log(imageYear);
-        console.log(year);
         if (year === "all" || imageYear === year) {
           image.style.display = "block";
-          image.style.visibility = "visible";
         } else {
           image.style.display = "none";
-          image.style.visibility = "hidden";
         }
       });
     });

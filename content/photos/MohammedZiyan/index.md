@@ -1,5 +1,5 @@
 ---
-title: "MohammedZiyan"
+title: "College Chronicles"
 author: "Mohammed Ziyan"
 semester: 2
 year: 2022
