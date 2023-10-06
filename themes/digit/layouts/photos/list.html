@@ -1,14 +1,16 @@
-{{ define "main" -}}
+{{ define "main" }}
+
 <section class="bg-white :bg-gray-900">
   <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
     <div class="mx-auto max-w-screen-sm text-center lg:mb-16 mb-8">
       <h2
         class="mb-4 text-3xl lg:text-4xl tracking-tight font-extrabold text-gray-900 :text-white"
       >
-        Poems
+        Photos
       </h2>
     </div>
 
+    <!-- Year Buttons -->
     <div class="year-buttons mb-10">
       {{ $years := slice }} {{ range .Site.RegularPages }} {{ if eq .Section
       "blogs" }} {{ $year := .Params.year }} {{ if not (in $years $year) }} {{
@@ -31,6 +33,7 @@
       </div>
     </div>
 
+    <!-- Article List -->
     <div class="grid gap-8 lg:grid-cols-2">
       {{- range.Pages }}
       <div class="article" data-year="{{.Params.year}}">
@@ -59,4 +62,5 @@
     });
   }
 </script>
-{{- end }}
+
+{{ end }}

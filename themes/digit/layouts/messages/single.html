@@ -1,0 +1,8 @@
+{{ define "main" }}
+<div class="max-w-screen-xl px-4 py-8 mx-auto lg:py-16 lg:px-6">
+  <h1 class="text-3xl font-bold my-10 mb-8">{{.Params.title}}</h1>
+  <h3 class="text-l font-semibold">By {{.Params.author}}</h3>
+  <h3 class="text-m mb-16 font-semibold">{{.Params.jobTitle}}</h3>
+  <div class="prose">{{.Content}}</div>
+</div>
+{{ end }}

@@ -1,7 +1,8 @@
 ---
-title: "AnanduRaveendran"
+title: "Anime Aesthetics"
 author: "Anandu Raveendran"
 semester: 2
+year: 2022
 person: ["person2"]
 image_links:
   - "https://i.imgur.com/Wt3KD3O.jpg"

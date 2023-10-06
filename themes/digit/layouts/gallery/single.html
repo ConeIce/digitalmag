@@ -1,0 +1,94 @@
+{{ define "main" }}
+
+<div class="buttons flex items-center justify-center py-4 md:py-4 flex-wrap">
+  <button id="all" class="bg-gray-200 px-3 py-2 mr-5 rounded-md">All</button>
+  {{ $galleryDir := "content/gallery" }} {{ $dirs := readDir $galleryDir }} {{
+  range $dirs }} {{ if and .IsDir (ne .Name "faculty") }}
+  <button class="bg-gray-200 px-3 py-2 mr-5 rounded-md" id="{{ .Name }}">
+    {{ .Name }}
+  </button>
+  {{ end }} {{ end }}
+</div>
+
+<div class="p-10 flex flex-col items-center content-center">
+  <div class="block md:grid grid-cols-3 gap-10 w-full h-full">
+    {{- $images := .Resources.ByType "image" -}} {{ range $images }} {{ if not
+    (strings.Contains .RelPermalink "faculty") }} {{ $year := index (split
+    .RelPermalink "/") 2 }}
+    <img
+      data-year="{{ $year }}"
+      class="image mb-10 w-full h-full object-cover cursor-pointer md:hover:scale-105 transition-transform duration-300 transform rounded-lg"
+      src="{{ .RelPermalink }}"
+      alt="Image"
+    />
+    {{ end }} {{ end }}
+  </div>
+</div>
+
+<div class="mx-auto max-w-screen-sm mt-10 text-center lg:mb-16 mb-8">
+  <h2
+    class="mb-4 text-3xl lg:text-4xl tracking-tight font-extrabold text-gray-900 :text-white"
+  >
+    Faculty
+  </h2>
+</div>
+
+<div class="grid grid-cols-2 gap-4 md:grid-cols-5 gap-1 mb-10">
+  {{ range .Resources.ByType "image" }} {{ if strings.Contains .RelPermalink
+  "faculty" }}
+  <div>
+    <img
+      class="p-5 w-48 h-48 object-cover rounded-full m-auto"
+      src="{{ .Permalink }}"
+      alt="Image"
+    />
+    {{ with .Name }} {{ $imageName := replace . ".jpg" "" }} {{ $final :=
+    replace $imageName "faculty/" ""}}
+    <h4 class="text-center font-semibold mt-3">{{ $final }}</h4>
+    {{ end }}
+  </div>
+  {{ end }} {{ end }}
+</div>
+
+<script>
+  // Get all buttons and images
+
+  // Add similar event listeners for other years
+  window.addEventListener("load", function () {
+    // Get all images
+    let images = document.querySelectorAll(".image");
+
+    // Hide all images initially
+    for (let i = 0; i < images.length; i++) {
+      images[i].style.display = "none";
+    }
+
+    // Show only the first 3 images
+    for (let i = 0; i < 3; i++) {
+      images[i].style.display = "block";
+    }
+  });
+
+  const buttons = document.querySelectorAll(".buttons button");
+  const images = document.querySelectorAll(".image");
+
+  buttons.forEach((button) => {
+    button.addEventListener("click", (event) => {
+      // Get selected year from button id
+      const year = event.target.id;
+
+      const images = document.querySelectorAll(".image");
+      images.forEach((image) => {
+        const imageYear = image.getAttribute("data-year");
+        console.log(imageYear);
+        if (year === "all" || imageYear === year) {
+          image.style.display = "block";
+        } else {
+          image.style.display = "none";
+        }
+      });
+    });
+  });
+</script>
+
+{{ end }}

@@ -1,7 +1,8 @@
 ---
-title: "AbhijithKrishnan"
+title: "Nature's Serenity and Beyond"
 author: "Abhijith Krishnan"
 semester: 2
+year: 2022
 person: ["person1"]
 image_links:
   - "https://i.imgur.com/s4UkHyo.jpg"
